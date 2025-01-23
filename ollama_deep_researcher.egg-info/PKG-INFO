@@ -20,6 +20,9 @@ Ollama Deep Researcher is a web research and summarization assistant that autono
 
 ![research-rabbit](https://github.com/user-attachments/assets/4308ee9c-abf3-4abb-9d1e-83e7c2c3f187)
 
+Adaption from T. Hein. Inspired by https://www.youtube.com/watch?v=sGUjmyfof4Q&t=1s and https://github.com/langchain-ai/ollam...
+ 
+
 ## 🚀 Quickstart
 
 Pull a local LLM that you want to use from [Ollama](https://ollama.com/search):
