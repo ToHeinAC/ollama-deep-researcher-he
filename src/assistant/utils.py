@@ -1,5 +1,21 @@
 from langsmith import traceable
 from tavily import TavilyClient
+from dotenv import load_dotenv
+import os
+from pathlib import Path
+
+def find_project_root(current_path: Path) -> Path:
+    """Find the project root by looking for .env file"""
+    while current_path.parent != current_path:  # Stop at filesystem root
+        if (current_path / '.env').exists():
+            return current_path
+        current_path = current_path.parent
+    raise FileNotFoundError("Could not find .env file in any parent directory")
+
+# Get the project root directory and load .env
+current_file = Path(__file__).resolve()
+project_root = find_project_root(current_file.parent)
+load_dotenv(dotenv_path=project_root / '.env')
 
 def deduplicate_and_format_sources(search_response, max_tokens_per_source, include_raw_content=True):
     """
