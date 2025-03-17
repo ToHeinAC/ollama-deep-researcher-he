@@ -1,0 +1,1 @@
+given the current volatility, sentiment and geopolitical issues, which are the best 5 stocks to pick for a holding period of 3 years? I want to achieve a cagr of at least 12%
